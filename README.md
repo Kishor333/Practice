@@ -26,44 +26,15 @@
 	<br>
 </div>
 
-<article class="main">
-<section class="hello">
-
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">
-	<a href="#hello">king</a>
-</div>
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">hell</div>
-
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">hell</div>
-v
-<div  style="color:blue;">hell</div>
-v
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">hell</div>
-v
-v
-v
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">hell</div>
-
-<div  style="color:blue;">hell</div>
-<div  style="color:blue;">hell</div>
-v
-v
-<div id="hello" style="color:blue;">hell</div>
+<article  style="display:flex; background-color: white;">
+<section style="background-color: red; width: 20%; position: sticky; top: 20vh; max-height: calc(100vh - 64px);">
+	<div>
+	hello
+	</div>
 
 </section>
 
-<section class="hello1">
+<section style="background-color: red; width: 80%; position: sticky; top: 20vh; max-height: calc(100vh - 64px);">
 
 <div  style="color:blue;">hell</div>
 <div  style="color:blue;">
