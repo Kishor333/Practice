@@ -1,23 +1,3 @@
-<style>
-	.main {
-		display:flex;
-		height: 100dvh;
-		background-color: white;
-	}
-	.hello {
-		background-color: red;
-		width: 20%;
-		position: sticky;
-    	top: 20vh;
-		max-height:calc(100dvh - 64px);
-		
-	}
-	.hello1 {
-		background-color: yellow;
-		width: 80%;
-		
-	}
-</style>
 <div align="center">
 	<br>
 	<div >
