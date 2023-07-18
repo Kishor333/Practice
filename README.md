@@ -22,408 +22,57 @@ $hello$
 
 
 
-&nbsp;
-#### 7. Copied Codes not removed
-
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
-```html                                         				
-<table mat-table>   				    		<table mat-table>										 <th mat-header-cell> Weight </th>				  <th mat-header-cell> Weight </th> 								 <td mat-cell> {{element.weight}} </td>				   <!--Name Column--> 										</table>							   <!--Note that these columns can be defined in any order. -->	 		 
-								  <td mat-cell> {{element.weight}} </td>	     														   <td mat-cell> {{element.weight}} </td>	
-								<table>  
-```
-
->
-> ### $\textcolor{red}{\textsf{SCSS-007: Nu.30}}$
->
-
-&nbsp;
-#### 8. Provide the stylesheet info by commenting
-- recommended for mixins
-
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
-```scss
-_variables.scss
-/*
-Variables.scss: contains variables referable by other stylesheet to avoid redundancy 
-*/
-```
-
-&nbsp;
-#### 9.Always write (&:hover, &:focus) intact and give pointer cursor to all action links and buttons
-
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
-```css
-a {
-   text-decoration: none;
-   &:hover, &:focus {
-   cursor: pointer
-  }
-}
-```
-
-&nbsp;
-#### 10. Let us avoid using long path names while importing
-
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
-```scss
- @import ‘variables’; 								@import ‘../../assets/stylesheets/variables’
- @use ‘variables’ as *; 
- 
-
-Add "stylePreprocessorOptions" in angular.json
-
-example of config: 
-"architect": {
-        "build": {
-          "options": {
-            "stylePreprocessorOptions": {
-              "includePaths": ["apps/your-app/src/assets/styles"]
-            },
-```
-&nbsp;
-#### 11. Always install SCSS lint plugin in webstorm or any other IDE you are using
--To be discussed further
 
 
-# Framework 
-## React 
-
-### 1. File Naming Conventions
-* A folder and sub folder names should always start with small letters and the function name should always be in the PascalCase (i.e, First letter of the component name with capital letter).
-* Name of the folder and sub folder name  should be always separated by  “-”. 
-* Avoid using “_” and avoid direct naming the folder and sub folder with “PascalCase”.
-
-> **Best Practice**
-
- 
-  ![1.png](/ui_react/1.png)
-> {.is-success}
-
-&nbsp;
-### 2. Structuring Folder
-
-* All the components, globals, shared components,  assets, translation,  redux etc.. Should be written inside the app folder
-* Insert all the assets inside the assets folder which included images, logo, font-family and icons .ttf/.otf files.
-* Used “_” to name the assets except for the font-family and icon .ttf /.otf file as it is when we download it.
-* The localization file is directly written in the app folder.
-
-&nbsp;
-### 3. Putting imports in an order
-1. React import
-2. Library imports (Alphabetical order)
-3. Absolute imports from the project (Alphabetical order)
-4. Relative imports (Alphabetical order)
-5. Import * as
-6. Import ‘./<some file>.<some extension>
-
-&nbsp;
-### 4. Follow the camelCase for the following:
-* For the class, variable, function, styling className and etc should be always in camelCase. Avoid using the “_”, “-” or special characters and numbers.
-
-&nbsp;
-### 5. Wrapping of the 3rd party libraries in the main component/ top level component.
-* To avoid the wrapping of the 3rd party libraries repeated. Please wrap it on the top level components like main.tsx or app.tsx.
-> **Best Practice**
-  ![5.png](/ui_react/5.png)
-> {.is-success}
-
-&nbsp;
-### 6. Don’t repeat yourself [DRY]
-* One of the basic principles of software development is Don’t Repeat Yourself. We must not write the same piece of code twice. Whenever you write the same piece of code twice, you must try to refactor it into something reusable, even if not completely.
-* You can create your own reusable components. 
-
-&nbsp;
-### 7.Avoid inline styling
-* Try to avoid inline styling as much as possible to have clean code.
-* Have the styling files separate.
-* Class name should be always in camelCase either you use styled-components or react native styling.
-
-&nbsp;
-### 8. Make Sure Your App is Responsive
-
-* You must always make sure that the app you are building is responsive, meaning it is consistent across different devices and platforms.
-
-&nbsp;
-### 9.Don’t put logs
-* Remove the console log before you push your changes into the release build.
-
-&nbsp;
-### 10.CSS unit accept in react-native
-* React Native accept are “px” and “%” css units only, avoid using other css units in react native.
-
-&nbsp;
-### 11.Implementing styling logically
-* When there are two css or more properties to implement logically in the same tag, try to have the style classname and implement it.
-* Accepted for the single css property to implement logically in the tag.
-
-&nbsp;
-### 12. Line of code for the component should not exceed more than 100. 
-* A file should not have more than 100 lines of code.
-
-&nbsp;
-### 13. For looping data, make a constant folder and loop data using map function.
-* When similar data is repeating, please make a constant folder and loop the data using function such as map. 
-> **Best Practice**
-  ![13.1.png](/ui_react/13.1.png)
-> {.is-success}
-
-&nbsp;
-### 14. For theming, all the variables should be defined in ts. Then we will create a global variable in the assets folder.
-> **Best Practice**
-  ![14.1.png](/ui_react/14.1.png)
-  ![14.2.png](/ui_react/14.2.png)
-> {.is-success}
-  
-&nbsp;
-### 15. Import of the required library should be particular to a file.
-> **Best Practice**
-– Use Code reformat
-			OR
-– github lint
-> {.is-success}
-  
-&nbsp;
-### 16. For any logical condition use hook, and interface to pass variable from on component to child component.
-* Whenever there is a logical condition, use react hook such as useState, and to pass variables from parent to a child component, use props.
-
-    i) Using use state to show and hide the elements. 
-> **Best Practice**
-![16.1.1.png](/ui_react/16.1.1.png)
-  ![16.1.2.png](/ui_react/16.1.2.png)
-> {.is-success}
-
-  ii) Using props and interface to pass data from parent to child.
-  > **Best Practice**
-  ![16.2.1.png](/ui_react/16.2.1.png)
-  ![16.2.2.png](/ui_react/16.2.2.png)
-![16.2.3.png](/ui_react/16.2.3.png)
-> {.is-success}
- 
-&nbsp;
-### 17. Don’t use {} in className and props unless there are some logical conditions to be written. Value string, don’t use {} (refactor)
-Avoid using {} in className unless there are some logical conditions to be written as it makes the code noisy.
-
-> **Best Practice**
- insert img
-> {.is-success}
-  
-> **Bad Practice**
-  ![17-bad.png](/ui_react/17-bad.png)
-> {.is-danger}
-
-&nbsp;
-### 18. React Material 
-1. Avoid usage of p, span and div tag. We will use typography, and box layout.
-React Material has their own component, that can be modified and used easily in the material configuration (theming)
-> **Best Practice**
-  ![18.1.png](/ui_react/18.1.png)
-> {.is-success}
-  
-2. We will use mixins that is already provided by Material.
-Material provide their own mixin and hence, we don’t have to create our own mixin using  SCSS.
-
-&nbsp; 
-### 19. Style Components.
-
-1. Styled Components should be reusable by passing props.
-  
-Styled Components should be coded in such a way that we can pass probs. This way the styled component can be reused and line of code reduces.
-> **Best Practice**
-  ![19.1.png](/ui_react/19.1.png)
-> {.is-success}
-  
-
-2. Component naming should be in Pascal Case. (Prefix should start using Styled)
-  
-Styled component naming convention should be in Pascal case and should start with ‘Styled’ followed by the component name. This way we can differentiate between normal components and styled component.
-> **Best Practice**
-  ![19.2.png](/ui_react/19.2.png)
-> {.is-success}
-
-3. Common style should in shared.styles.tsx 
-> **Best Practice**
-![19.3.png](/ui_react/19.3.png)
-  > {.is-success}
-  
-4. UI kits needs to be wrapped by Styled Component (Optional)
-  
-Kits such as buttons need to be wrapped inside a styled component so that we can pass props to it or easily apply style inside the kits itself.
-> **Best Practice**
-![19.4.png](/ui_react/19.4.png)
-  > {.is-success}
-  
-# Tailwind
-### 1. Make css files
-Make a separate file for variable if there are many color variables only, otherwise it can be imported in config file
-
-> **Flies**
- |-application.scss (just imports of files)
-	|-component (Classes of only the components of a particular project)
-	|-base.scss (tailwind base that you want to change)
-	|-variable.scss
-	|-form.scss
-	|-modal.scss
-	|-animations.scss
-	|-overwrite.scss
-	|-common.scss
-> {.is-success}
-
-> <span style="color:#FF0000">If in case separate files are not maintained</span> 
->  <span style="color:#FF0000; font-size: 24px">tw-001: Nu.10</span>
-{.is-info}
-
-### 2. Configuration 
-Same tailwind configuration to be maintained in all the projects. Make use of JIT.
-  
-### 3. Make best use of directive in css/scss to make components so as to avoid repetition of long  classes in html.
-Ex: @apply, @layer, @variants, etc
-Make best use of @apply to make common components such as btn, btn--primary, cards, etc.
-More than 6 tailwind class and use case more than two then this to be included in tailwind css component with @apply
-
-> **Flies**
- @layer components { 
-    .sk-btn {
-      &emsp;@apply h-[40px] rounded-[4px] border cursor-pointer;
-        &emsp; &--primary {
-          &emsp;	@apply bg-primary text-white;
-        &emsp;}
-        &emsp; &--secondary {
-          &emsp; @apply bg-blue text-white;
-        &emsp;}
- 		}
-> {.is-success}
-
-> <span style="color:#FF0000">If in case separate files are not maintained</span> 
->  <span style="color:#FF0000; font-size: 24px">tw-002: Nu.15</span>
-{.is-info}
-
-### 4. Tailwind classes
-Make best use of tailwind classes instead of using css porterty
-
-### 5. Let’s not extend colors
-Instead of using tailwind colors along with project specific colors, let us only use custom colors. I.e instead of extending colors, specify it outside. 
-
-> <span style="color:#FF0000">If in case extending colors</span> 
->  <span style="color:#FF0000; font-size: 24px">tw-003: Nu.20</span>
-{.is-info}
-
-### 6. Root variable - naming convention
-Always use colors as variables and variable naming of colors should be similar to the UI convention.
-Ex:
-primary: 46 204 113; (rgb code can be used so as to generate lighter version)
-white: #FFFFFF
-black: #000000
-  
-Not allowed to use bg-[rgba(0,0,0,0.5)], instead derive lighter version of colors from one base color.
-  
-> **Best Practice**
- 	colors: {
-        &emsp; primary: withOpacityValue('--primary'),
-        &emsp; success: withOpacityValue('--success'),
-        &emsp; blue: withOpacityValue('--blue'),
-        &emsp; error: withOpacityValue('--error'),
-        &emsp; brown: withOpacityValue('--brown')
- 	}
-> {.is-success}
-  
-> <span style="color:#FF0000">if found using bg-[rgba(0,0,0,0.5)] to generate lighter color</span> 
->  <span style="color:#FF0000; font-size: 24px">tw-005: Nu.15</span>
-{.is-info}
-
-### 7. PX and REM are not to be mixed
-Px and Rem units are not to be mixed. All the clases with rem in tailwind should be converted to px. Ex. rounded to rounded-[4px].
-
-> <span style="color:#FF0000">If in case found mixing above mentioned clasess</span> 
->  <span style="color:#FF0000; font-size: 24px">tw-004: Nu.20</span>
-{.is-info}
-
-### 8. Gap to be used only with Grid
-Gap classes to be used only with grid as there is issue with browser compatibility.
-
-> <span style="color:#FF0000">If in case found using it with flex or others</span> 
->  <span style="color:#FF0000; font-size: 24px">tw-006: Nu.20</span>
-{.is-info}
-
-## Hotwire
-
-1. Project prefix for classes
-2. Use rails looping for UI repetition
-3. Use share directory for common partials if required
-
-### Translations
-
-1. All the translations should be in one level and in case of shared repo use project prefix and all translations in the same level.
-Keys to be lowercase and separated by underscores
-  eg:   start_shopping: "Start Shopping"
-
-> **Best Practice**
-![screen_shot_2022-05-23_at_12.23.33_pm.png](/assets/css/screen_shot_2022-05-23_at_12.23.33_pm.png)
-> {.is-success}
-
-2. Avoid conjunctions and prepositions in the key such as a,the, in,an,as.
 
 
 
 # Pull Request
 #### 1.  Always give a `Proper Branch Name`. Remember to include `UI` at the end of the branch name to differentiate it from `FE branch`.
+### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
+```
+ feature/event-creation-ui			feature/event-creation-ui-karma
+ feature/profile-ui				event_creation
+ feature/auth-ui				ft/event-creation
 
-> **Best Practice**
- feature/event-creation-ui
- feature/profile-ui
- feature/auth-ui
-> {.is-success}
-
-> **Bad Practice**
- feature/event-creation-ui-karma
- event_creation
- ft/event-creation
-{.is-danger}
-
-> <span style="color:#FF0000; font-size: 24px;">PR-001: Nu. 20</span>
-{.is-info}
+```
+>
+> ### $\textcolor{red}{\textsf{PR-001: Nu. 20}}$
+>
 
 
 &nbsp;
 #### 2. Make `PR comments` easily comprehensive using these tags along with comments
 -for #Mandatory and #Fine the comments have to be resolved immediately
 -Reviewers have to make sure not to approve PR unless these two comment tags (#Mandatory and #Fine) are resolved.
-
-> **List of Tags**
+### $${\textcolor{green}{\textsf{-------List of Tags----------------------------}}}$$
+```
  #Doubt
  #Suggestion
  #Refactor
  #Mandatory
  #FutureRecommendation
  #Fine
-> {.is-success}
+```
 
 &nbsp;
 #### 2. While commiting, the message should be meaningful and understandable. "Commit a command, not a story or gibberish words"
+
+### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
+```
 - Never use special characters  for messages.
 
-> **Best Practice**
- git commit -m "layout for student profile "
-> {.is-success}
-
-> **Bad Practice**
- git commit -m "layout!" 
-{.is-danger}
- 
-> <span style="color:#FF0000; font-size: 24px;">PR-002: Nu. 30</span>
-{.is-info}
+ 	git commit -m "layout for student profile " 				git commit -m “layout!”
 
 - Never use numbers in your message while Commiting
 
-> **Best Practice**
- git commit -m "Responsive Layout"
-> {.is-success}
+	git commit -m "Responsive Layout" 					git commit -m “Responsive Layout 1”
+```
 
-> **Bad Practice**
- git commit -m "Responsive Layout 1"
-{.is-danger}
+>
+> ### $\textcolor{red}{\textsf{PR-003: Nu. 30}}$
+>
 
-> <span style="color:#FF0000; font-size: 24px;">PR-003: Nu. 30</span>
-{.is-info}
 
 &nbsp;
 #### 3. Proper title and Description should be given to one's `PR review`.
