@@ -94,55 +94,62 @@ $hello$
 - Example :` [CLUB RUSH 03-12-2022] PR title `
 
 
-
-> <span style="color:#FF0000; font-size: 24px;">PR-004: Nu. 20</span>
-{.is-info}
+>
+> ### $\textcolor{red}{\textsf{PR-004: Nu. 20}}$
+>
 
 &nbsp;
-#### 4. Make sure to `Put Screenshots` of UI designs when creating a pull request for your team to review.
+#### 4. Make sure to `Put Screenshots` of UI designs when creating a pull request for your team to review. AND add `screen recording` if there is any transition taking place.
 - Put the screenshots in the respective component file.
 - Put screenshots for any kind of design changes- major or minor.
 
-> <span style="color:#FF0000; font-size: 24px;">PR-005: Nu. 20</span>
-{.is-info}
+>
+> ### $\textcolor{red}{\textsf{PR-005: Nu. 20}}$
+>
+
 
 &nbsp;
-#### 5.  Always `Include all the UI Team Members` and `FE member(project based)` for your PR review.
+#### 5.  Always `Include all the UI Team Members`, `FE,UX and PA member(project based)` for your PR review.
 
-> <span style="color:#FF0000; font-size: 24px;">PR-006: Nu. 10</span>
-{.is-info}
+>
+> ### $\textcolor{red}{\textsf{PR-006: Nu. 10}}$
+>
 
 &nbsp;
 #### 6. Always `review PR` that you are tagged in, `before the deadline`.
- 
-> <span style="color:#FF0000; font-size: 24px;">PR-007: Nu. 30</span>
-{.is-info}
+
+>
+> ### $\textcolor{red}{\textsf{PR-007: Nu. 30}}$
+>
 
 &nbsp;
 #### 7. Repeating the same mistake or ignoring previous PR comments
 
-> <span style="color:#FF0000; font-size: 24px;">PR-008: Nu. 30</span>
-{.is-info}
+>
+> ### $\textcolor{red}{\textsf{PR-008: Nu. 30}}$
+>
 
 &nbsp;
 #### 8. PR should not be too lengthy.
 - Organize PR's in small chunks.
 
-> <span style="color:#FF0000; font-size: 24px;">PR-009: Nu. 20</span>
-{.is-info}
-
+>
+> ### $\textcolor{red}{\textsf{PR-009: Nu. 20}}$
+>
 
 # Formatting
 #### 1. Formatting does not follow the `convention standard (HTML, SCSS, TS, JSON)`.
-![Rule Book](/uploads/rule-book.png "Rule Book")
 
-> <span style="color:#FF0000; font-size: 24px;">FORMAT-001: Nu. 20</span>
-{.is-info}
+>
+> ### $\textcolor{red}{\textsf{FORMATE-001: Nu. 20}}$
+>
 
 &nbsp;
 #### 2. Maximum Lines of code for any SCSS is 500.
-> <span style="color:#FF0000; font-size: 24px;">FORMAT-002: Nu. 20</span>
-{.is-info}
+>
+> ### $\textcolor{red}{\textsf{FORMATE-002: Nu. 20}}$
+>
+
 
 &nbsp;
 #### 3. Always add a Revisit tag when you need to Revisit a code. It can be used in two ways:
@@ -150,35 +157,38 @@ $hello$
 
 Formats for revisit tag should be strictly in the following format:
 1. REVISIT-TRANSLATE 
-	 &nbsp;This tag is used if you need to add the translation later.
+	 This tag is used if you need to add the translation later.
 2. use TODO as revisit tag
-		&nbsp; Eg: TODO BE/FE : comment
+	 Eg: TODO BE/FE : comment
 
-> <span style="color:#FF0000; font-size: 24px;">FORMAT-003: Nu. 20</span>
-{.is-info}
+>
+> ### $\textcolor{red}{\textsf{FORMATE-003: Nu. 20}}$
+>
 
  &nbsp;
 #### 4. Follow a proper format for writing your html code
 
 ```html
 Syntax:
-<div FlexLayoutAttr HTMLAttr 
+<div
+  *ngIf="condition" 
+  *ngFor="condition"
+  HTMLAttr FlexLayoutAttr
   [class, type, label, placeholder) 
   [inputData]= “inputData” 
   [outputData]=”outputData” 
-  *ngIf="condition" 
-  *ngFor="condition" 
   [routerLink]= “link“ 
-  (click)= “function“>
+  (click)= “function“
+  data-cy="dataCy">
 </div>
-
-Best Practice																													
-Good Code readability 																															 
-<mat-select fxLayout="row" fxFlex="100" class="custom-select" *ngIf="condition">									 
+ 																															 
+<mat-select *ngIf="condition" fxLayout="row" fxFlex="100" class="custom-select" data-cy="dataCy">									 
   <mat-option value="option" *ngFor="condition">Option</mat-option>	
 </mat-select> 											 																														
 
-<sf-input [control]="props('min_price')" 
+<sf-input *ngIf="condition"
+	*ngFor="condition"
+	[control]="props('min_price')" 
 	[appearance]="'outline'
 	[label]="'MINIMUM_PRICE'"
 	[type]="'number'"
@@ -194,27 +204,40 @@ Good Code readability
 	[ngClass]=”{‘hello-paradise’ : condition}” ngClass.md=”hello-hell” ngClass.sm=”hello-hell” ngClass.xs=”hello-hell”
 	[inputData]= “inputData”
 	[outputData]=”outputData”
-	*ngIf="condition"
-	*ngFor="condition"
 	[routerLink]= “link“
 	(click)= “function“>
 </sf-input>
+
+project with Tailwind:
+
+<div *ngIf="condition"
+	role="button" aria-label="open the modal for filter"
+	class="flex justify-center custom-btn p-12 xs:w-full sm:w-[50%] hover:bg-primary"
+	(click)="function()"
+	data-cy="openFilter"
+	>
+</div>
 ```
 
 # Translation
 
 #### 1. One should not miss any translation.
 - Always add a comment whether the translation or Data is coming from BE/FE.
+
+### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
 Best Practice                                                               #Bad Practise
 <span fxFlex="95" class="gray-color">                                       <span fxFlex="95" class="gray-color">
        {{'CANT_RESCHEDULE' | translate }}                                        {{'Can't Reschedule'}}
 </span>                                                                     </span>
-// REVISIT TRANSLATE																					// Dummy Text, translation from FE
-<span> Name </span>																												 <span> Name </span>
+																							                                                            
+ // REVISIT TRANSLATE							    // Dummy Text, translation from FE
+<span> Name </span>							     <span> Name </span>
 ```
-> <span style="color:#FF0000; font-size: 24px;">TRANS-001: Nu. 20</span>
-{.is-info}
+
+>
+> ### $\textcolor{red}{\textsf{TRANS-0013\: Nu. 20}}$
+>
 
 &nbsp;
 #### 2. One should have a proper name for a translation key. 
@@ -225,12 +248,12 @@ Best Practice                                                               #Bad
 - Always use translation prefix depending on the type of your translation.
 - Please follow the priority levels of prefix based on which you may use the prefix that you want for the desired translation key
  
-&nbsp;&nbsp;&nbsp;1. BTN
-&nbsp;&nbsp;&nbsp;2. LABEL
-&nbsp;&nbsp;&nbsp;3. HINT
-&nbsp;&nbsp;&nbsp;4. QUEST
-&nbsp;&nbsp;&nbsp;5. SUCCESS
-&nbsp;&nbsp;&nbsp;6. ERROR
+		1. BTN
+		2. LABEL
+		3. HINT
+		4. QUEST
+		5. SUCCESS
+		6. ERROR
 
 
 - Please add full stop in your `ERROR, SUCCESS and HINT` texts only if  it is a full fledged sentence or long sentence or is a requirement from client/BA.
