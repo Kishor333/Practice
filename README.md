@@ -555,7 +555,6 @@ greyish-pink: '#C48D8A'					'peach-fog': '#C48D8A'; (Since a peach will change i
 										lifespan.)			
 procelain-blue: '#ECF2F8',				'squeeze-blue': '#ECF2F8',(please don't squeeze any color),
 pinkish-red: '#FBF0F3',					'amour-pink': '#FBF0F3',(Can you imagine how it will look when a warrior goes to war with pink armor?)
-
 ```
 
 > <span style="color:#FF0000">DO NOT use the hex value or color name directly in your scss..</span>
@@ -580,7 +579,7 @@ pinkish-red: '#FBF0F3',					'amour-pink': '#FBF0F3',(Can you imagine how it will
  p {
   color:  rgba($black, 0.70);
  }
-
+```
 
 > <span style="color:#FF0000">Unnecessary shades of any colors will be fined.(exceptional: primeNG theming)</span>
 >
