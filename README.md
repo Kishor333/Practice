@@ -181,10 +181,10 @@ Syntax:
   (click)= “function“
   data-cy="dataCy">
 </div>
- 																															 
-<mat-select *ngIf="condition" fxLayout="row" fxFlex="100" class="custom-select" data-cy="dataCy">									 
-  <mat-option value="option" *ngFor="condition">Option</mat-option>	
-</mat-select> 											 																														
+
+<mat-select *ngIf="condition" fxLayout="row" fxFlex="100" class="custom-select" data-cy="dataCy">
+  <mat-option value="option" *ngFor="condition">Option</mat-option>
+</mat-select>
 
 <sf-input *ngIf="condition"
 	*ngFor="condition"
