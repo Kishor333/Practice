@@ -1,31 +1,3 @@
-#### $\textcolor{red}{\textsf{Color didint work .}}$
-
-#### $\textcolor{green}{\textsf{Color didint work .}}$
-
-$${\color{green}Preview\ text}$$
-
-$\color{#D29922}\textsf{\Large\&#x26A0;\kern{0.2cm}\normalsize Warning}$ 
-$\color{#58A6FF}\textsf{\Large\&#x24D8;\kern{0.2cm}\normalsize Note}$
-
-$foo$
-$lorem ipsum dolor sit amet$
-
-**$\text{lorem ipsum dolor sit amet}$**
-
-**$\textbf{lorem ipsum dolor sit amet}$**
-
-$\textbf{lorem ipsum dolor sit amet}$
-
-$hello$
-`$\fcolorbox{yellow}{red}{\textsf{lorem ipsum}}$`
-
-
-
-
-
-
-
-
 
 # Pull Request
 #### 1.  Always give a `Proper Branch Name`. Remember to include `UI` at the end of the branch name to differentiate it from `FE branch`.
