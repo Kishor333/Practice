@@ -226,17 +226,14 @@ project with Tailwind:
 
 ### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
-Best Practice                                                               #Bad Practise
 <span fxFlex="95" class="gray-color">                                       <span fxFlex="95" class="gray-color">
        {{'CANT_RESCHEDULE' | translate }}                                        {{'Can't Reschedule'}}
-</span>                                                                     </span>
-																							                                                            
+</span>                                                                     </span>																						                                                            
  // REVISIT TRANSLATE							    // Dummy Text, translation from FE
 <span> Name </span>							     <span> Name </span>
 ```
-
 >
-> ### $\textcolor{red}{\textsf{TRANS-0013\: Nu. 20}}$
+> ### $\textcolor{red}{\textsf{TRANS-0013: Nu. 20}}$
 >
 
 &nbsp;
@@ -259,21 +256,19 @@ Best Practice                                                               #Bad
 - Please add full stop in your `ERROR, SUCCESS and HINT` texts only if  it is a full fledged sentence or long sentence or is a requirement from client/BA.
 
 > **Translation Prefix to be used**
-![screen_shot_2021-08-10_at_1.07.59_pm.jpg](/screen_shot_2021-08-10_at_1.07.59_pm.jpg)
- **Best Practice**
- LABEL_NAME
- BTN_ADD
- QUEST_YOUR_NAME
-{.is-success}
+<div align="center">	
+  <img src="asset/tra1.jpg" width="600px" alt="18.1.png">
+</div>
 
-> **Bad Practice**
- cant_reschedule
- cant_reschedule_your_appointment_for_meeting
- QUEST_WHAT_IS_YOUR_NAME
-{.is-danger}
-
-> <span style="color:#FF0000; font-size: 24px;">TRANS-002: Nu. 20</span>
-{.is-info}
+### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
+ ```
+ LABEL_NAME 							cant_reschedule
+ BTN_ADD    							cant_reschedule_your_appointment_for_meeting
+ QUEST_YOUR_NAME  						QUEST_WHAT_IS_YOUR_NAME
+```
+>
+> ### $\textcolor{red}{\textsf{TRANS-002: Nu. 20}}$
+>
 
 &nbsp;
 #### 3. For a line of long translation that expands beyond one's linting limit, include a backtick and break the line in multiple lines.
