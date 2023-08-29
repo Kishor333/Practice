@@ -307,13 +307,13 @@ project with Tailwind:
 
 ### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}}$$
 ```
-							**Folder**
-							 Backend
-							  en.json
-							  de.json
-							**File**
-							 backend_en.json
-							 backend_de.json
+				**Folder**
+				 Backend
+				  en.json
+				  de.json
+				**File**
+				 backend_en.json
+				 backend_de.json
 ```
 
 &nbsp;
@@ -391,7 +391,7 @@ Bad Practice Best Practice
 &nbsp;
 ### 2. Great-grandchildren
 - There are no grandchildren nor great-grandchildren in BEM. Instead, »normal« elements of the block can be used.
-- ### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
+### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
 <div class="card">						<div class="card">
   <div class="card__header">					 <div class="card__header">
@@ -406,39 +406,33 @@ Bad Practice Best Practice
 &nbsp;
 ### 3. Modifiers without a base class
 - Modifiers cannot exist without a base block or element.
+### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
-Bad Practice 																				   Best Practice
+<div class="card card--highlight">				<div class="card--highlight">
+  <div class="card__header"></div>			 	 <div class="card__header"></div> 
+</div>								</div>
 
-<div class="card--highlight">													<div class="card card--highlight">
-  <div class="card__header"></div>										  	<div class="card__header"></div>																					         
-</div>																					       </div>
-
-
-Bad Practice 																				   Best Practice
-
-<div class="card">													           <div class="card">
-  <div class="card__header--important"></div>							<div class="card__header card__header--important"></div>																					         
-</div>																					       </div>
-
+<div class="card">						<div class="card">
+ <div class="card__header card__header--important"></div>	 <div class="card__header--important">
+</div>								</div>
 ```
-><span style="color:#FF0000; font-size: 24px">BEM-003: Nu. 10</span>
-{.is-info}
+>
+> ### $\textcolor{red}{\textsf{BEM-03: Nu. 10}}$
+>
 
 &nbsp;
 ### 4. Too big blocks
 - It is not a good idea to create really big blocks. The idea of BEM is to create modular and reusable blocks.
-
+### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
-**Bad Practice**.                                      **Best Practice** 
-
-<body class="body">                                     <body class="body">    
-    <header class="body__header"></header>								   <header class="header"></header>	
-    <main class="body__main"></main>												 <main class="main"></main>
-    <footer class="body__footer"></footer>										<footer class="footer"></footer>
-</body>																									 </body>
+<body class="body">					<body class="body">
+    <header class="header">				 </header><header class="body__header"></header>
+     <main class="main"></main>				  <main class="body__main"></main>
+    <footer class="footer"></footer>			 <footer class="body__footer"></footer>
+</body>							</body>
   ```
+
  &nbsp;
- 
  # Utilities and Suggestions
  ## BEM: button__label--active and button--disabled
 
