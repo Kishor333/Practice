@@ -273,83 +273,78 @@ project with Tailwind:
 &nbsp;
 #### 3. For a line of long translation that expands beyond one's linting limit, include a backtick and break the line in multiple lines.
 
-> **Best Practice**
- ![screen_shot_2020-06-24_at_5.26.36_pm.png](/ui-conventions/screen_shot_2020-06-24_at_5.26.36_pm.png)
-> {.is-success}
+### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}}$$
+```
+  "HINT_DROP_SIGNATURE": "Drop your signature here or
+   <span class=\"text-primary\"><u class=\"font-bold\">Choose File</u></span>",
+```
 
-> **Bad Practice**
- ![screen_shot_2020-06-24_at_5.26.42_pm.png](/ui-conventions/screen_shot_2020-06-24_at_5.26.42_pm.png)
-{.is-danger}
-
-> <span style="color:#FF0000; font-size: 24px;">TRANS-003: Nu. 30</span>
-{.is-info}
-
+### $${\textcolor{red}{\textsf{----------------------Bad Practice----------------------}}}$$
+```
+  "HINT_DROP_SIGNATURE": "'Drop your signature here or' +
+   <span class=\"text-primary\"><u class=\"font-bold\">Choose File</u></span>",
+```
+>
+> ### $\textcolor{red}{\textsf{TRANS-003: Nu. 30}}$
+>
 
 &nbsp;
 #### 4. Proper use of params
 - Don't use params when it is at the beginning or end of the sentence.
 - param name should be proper.
 
-> **Best Practice**
+### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
+```
 **en.ts**
-'SCHEDULED_RETAILER': 'Scheduled Interaction with Retailer'
- **HTML**
- {{'SCHEDULE_RETAILER' | translate}} {{count}}
-> {.is-success}
+'SCHEDULED_RETAILER': 'Scheduled Interaction with Retailer' 		'SCHEDULED_RETAILER': 'Scheduled Interaction with Retailer {{value}}'
 
-> **Bad Practice**
-**en.ts**
-'SCHEDULED_RETAILER': 'Scheduled Interaction with Retailer {{value}}'
-**HTML**
- {{'SCHEDULE_RETAILER' | translate : { value: 12 } }}
-{.is-danger}
+ **HTML**
+ {{'SCHEDULE_RETAILER' | translate}} {{count}}  			{{'SCHEDULE_RETAILER' | translate : { value: 12 } }}
+```
 
 &nbsp;
 #### 5. Segregate backend translations in a `folder` or as a separate `file`
 
-> **Best Practice**
-**Folder**
-Backend
-&nbsp; en.json
-&nbsp; de.json
-**File**
-backend_en.json
-backend_de.json
-> {.is-success}
+### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}}$$
+```
+							**Folder**
+							 Backend
+							  en.json
+							  de.json
+							**File**
+							 backend_en.json
+							 backend_de.json
+```
 
 &nbsp;
 #### 6. Do not use abbreviation in translation keys
 - The only abbrev allowed is ID or product short keys like NNI.
-> **Best Practice**
-"LABEL_BASIC_INFORMATION": "Basic Information",
-"LABEL_PHONE_NUMBER": "Phone No."
-> {.is-success}
+### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 
-> **Bad Practice**
-"LABEL_BASIC_INFO": "Basic Information",
-"LABEL_PHONE_NO": "Phone No."
-{.is-danger}
+```
+"LABEL_BASIC_INFORMATION": 					"Basic Information","LABEL_BASIC_INFO": "Basic Information",
+"LABEL_PHONE_NUMBER": "Phone No."				"LABEL_PHONE_NO": "Phone No."
+```
 
 &nbsp;
 #### 7. Avoid adding translations for static text.
-
-> **Bad Practice**
-**Examples**:
-LABEL_ID
-LABEL_SL
-LABEL_SELISE
-LABEL_HQ etc
-{.is-danger}
-
+- ### $${\textcolor{red}{\textsf{----------------------Bead Practice----------------------}}}
+```
+						**Examples**:
+						LABEL_ID
+						LABEL_SL
+						LABEL_SELISE
+						LABEL_HQ etc
+```
 
 # Presentation
 
 #### 1. Every two weeks (usually on wednesday) a peer programming team (of two) has to do a presentation on a topic they can select. Teams should be aware of their turn and present on that day accordingly.
-> <span style="color:#FF0000; font-size: 24px">PPT-001: Nu. 20</span>
-{.is-info}
+>
+> ### $\textcolor{red}{\textsf{PPT-01: Nu. 20}}$
+>
 
 &nbsp;
-
  # BEM (Block__Element--Modifier)
  #### The Block, Element, Modifier methodology (commonly referred to as BEM) is a popular naming convention for classes in HTML and CSS. It’s a CSS naming convention for writing cleaner and more readable CSS classes. BEM also aims to write independent CSS blocks in order to reuse them later in your project.
 
@@ -359,7 +354,7 @@ A **BEM** class name includes three parts.
     3.**Modifier** -  Either a block or element may have a variation signified by a modifier &nbsp; &nbsp;
 
 **BEM class namings**
-```html
+```css
 //Blocks are named as standard CSS classes
 .block {
 }
@@ -380,34 +375,33 @@ A **BEM** class name includes three parts.
 &nbsp;
 ### 1.Wrongly nested blocks and elements
 - It is not allowed to nest blocks. If you start a new block, you are not allowed to proceed with elements from another block.
+### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
-Bad Practice 																				Best Practice
-
-<div class="card">															   <div class="card">
-  <div class="header">															  <div class="card__header">	
-    <h2 class="card__headline></h2>									     <h2 class="card__headline></h2>	
-  </div>																					     </div>
-</div>																					   </div>
-
+Bad Practice Best Practice
+<div class="card">						<div class="card">
+ <div class="card__header"> 					 <div class="header">
+    <h2 class="card__headline></h2>				  <h2 class="card__headline></h2>
+  </div>							</div>
+</div>								</div>
 ```
-><span style="color:#FF0000; font-size: 24px">BEM-001: Nu. 20</span>
-{.is-info}
+>
+> ### $\textcolor{red}{\textsf{BEM-01: Nu. 20}}$
+>
 
 &nbsp;
 ### 2. Great-grandchildren
 - There are no grandchildren nor great-grandchildren in BEM. Instead, »normal« elements of the block can be used.
+- ### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
-Bad Practice 																				   Best Practice
-
-<div class="card">															        <div class="card">
-  <div class="card__header">															  <div class="card__header">	
-    <h2 class="card__header__headline></h2>									   <h2 class="card__headline></h2>	
-  </div>																					          </div>
-</div>																					        </div>
-
+<div class="card">						<div class="card">
+  <div class="card__header">					 <div class="card__header">
+    </h2><h2 class="card__headline></h2>			  <h2 class="card__header__headline>
+  </div>							 </div>
+</div>								</div>
 ```
-><span style="color:#FF0000; font-size: 24px">BEM-002: Nu. 15</span>
-{.is-info}
+>
+> ### $\textcolor{red}{\textsf{BEM-02: Nu. 15}}$
+>
 
 &nbsp;
 ### 3. Modifiers without a base class
