@@ -70,7 +70,7 @@ As usual we will have a ‘***stylesheets***’ directory for all the stylesheet
 &nbsp;
 #### 2. Always prioritise on using predefined utility class which is either provided by mixins or common styles
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$	
+### $${\textcolor{green}{\textsf{-------------------------Best Practice-------------------------}}} {\textcolor{red}{\textsf{-------------------------Bad Practice-------------------------}}}$$	
 ``` Scss
 Scss: 										
 .font-size-12 {	   						.world-text {									
