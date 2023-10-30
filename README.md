@@ -1,4 +1,3 @@
-
 <div align="center">
 	<br>	
 		<img src="header.svg" width="1100" height="400" alt="Click to see the source">
@@ -26,7 +25,7 @@ As usual we will have a ‘***stylesheets***’ directory for all the stylesheet
 
 > <span style="color:#FF0000">If incase the filename is different than its purpose</span>
 >
-> ### $\textcolor{red}{\textsf{UI-001: Nu.30}}$
+> ### UI-001: Nu.30
 >
 
 # CSS
@@ -45,8 +44,11 @@ As usual we will have a ‘***stylesheets***’ directory for all the stylesheet
 
 &nbsp;
 
- ### $\textcolor{green}{\textsf{Best Practice}}$
- ``` .user-table
+ 
+ ```
+✅ Best Practice:
+
+ .user-table
  .profile__card
  .profile__card--background
  .action-btn
@@ -55,23 +57,26 @@ As usual we will have a ‘***stylesheets***’ directory for all the stylesheet
  .img-container,img-thumbnail 
 ```
 
- ### $\textcolor{red}{\textsf{Bad Practice}}$
-```.userTable
+```
+❌ Bad Practice:
+
+ .userTable
  .table1
  .image-action-for-list-button 
  .grp-container
 ```
 > <span style="color:#FF0000">In case of weird names</span>
 >
-> ### $\textcolor{red}{\textsf{CSS-001: Nu. 30}}$
+> ### CSS-001: Nu. 30
 > 
 
 
 &nbsp;
 #### 2. Always prioritise on using predefined utility class which is either provided by mixins or common styles
-
-### $${\textcolor{green}{\textsf{-------------------------Best Practice-------------------------}}} {\textcolor{red}{\textsf{-------------------------Bad Practice-------------------------}}}$$	
+	
 ``` Scss
+✅ Best Practice:                       			❌ Bad Practice:
+
 Scss: 										
 .font-size-12 {	   						.world-text {									
   font-size: 12px; 						  font-size: 12px;	 		  
@@ -86,14 +91,16 @@ HTML:
 
 > <span style="color:#FF0000">Using explicit scss or css even when there are utility classes will cause you the fine below</span>
 >
-> ### $\textcolor{red}{\textsf{CSS-002: Nu. 20}}$
+> ### CSS-002: Nu. 20
 >
 
 &nbsp;
 #### 3. For `padding, margin and font-size`, let’s follow` multiples of 4 or 2 `and as far as possible, avoid using negative margin.
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
+
 
 ```scss
+        ✅ Best Practice:               			      ❌ Bad Practice:
+
 		h1 {							h1 {
 		 font-size: 24px: 	 				font-size: 35px;
 		} 							}
@@ -116,16 +123,16 @@ HTML:
 
 > <span style="color:#FF0000">There will be certain exceptions but given that positive or multiples of 2 or 4 could have been used, you will be fined</span> 
 >
-> ### $\textcolor{red}{\textsf{CSS-003: Nu. 20}}$
+> ### CSS-003: Nu. 20
 >
 
 
 
 &nbsp;
 #### 4. Avoid giving inline css to an html tag. Instead give a proper css class
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 
 ```scss
+✅ Best Practice:					        ❌ Bad Practice:
 
 Scss:
  .my-element {
@@ -142,7 +149,7 @@ Html:
 
 > <span style="color:#FF0000">There will be certain exceptions but given that inline could have been avoided, you will be fined.</span>
 >
-> ### $\textcolor{red}{\textsf{CSS-004: Nu. 20}}$
+> ### CSS-004: Nu. 20
 >
 
 &nbsp;
@@ -151,8 +158,9 @@ Refer: https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
 
 Generator: https://shrthnd.volume7.io/
 
- ### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```scss
+✅ Best Practice:								❌ Bad Practice:
+
 p {  										  p {
  margin: 4px;									    margin-left: 4px;
  background: #000 url(‘images/bg.gif’) no-repeat left top;			    margin-right: 4px;
@@ -178,7 +186,7 @@ p {  										  p {
 ```
 
 >
-> ### $\textcolor{red}{\textsf{CSS-005: Nu. 20}}$
+> ### CSS-005: Nu. 20
 >
 
 
@@ -188,8 +196,10 @@ p {  										  p {
 -for background image use background-image.
 
 -for background color use background-color.
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
+
 ```scss
+✅ Best Practice:								❌ Bad Practice:
+
 .example {  									.example { 
  background-color:red;								 background:red;
 }			    							}
@@ -203,8 +213,9 @@ p {  										  p {
  &nbsp;
 #### 7.For helper classes let’s not use `!important` because it should be overwrite-able
 
- ### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```scss
+✅ Best Practice:								❌ Bad Practice:
+
 body {  									body { 
  font-family: Arial;								 font-family: Aria !important;
  overflow-x: hidden;	    							 overflow-x: hidden !important;
@@ -218,15 +229,16 @@ body {  									body {
 
 > <span style="color:#FF0000">There will be certain exceptions but given that this could have been avoided, you will be fined</span> 
 >
-> ### $\textcolor{red}{\textsf{CSS-006: Nu. 20}}$
+> ### CSS-006: Nu. 20
 >
 
 
 &nbsp;
 #### 8. Always look for an alternative other than using `position:absolute/fixed`. It’s convenient to use that but it would cause issues that we never imagined(must have clear understanding and should be in position to explain you the individal have used).
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```scss
+✅ Best Practice:								❌ Bad Practice:
+
 ***Use flex or float for alignment***
  Example:
    float: right; 								 .profile-img {
@@ -237,20 +249,21 @@ body {  									body {
 
 > <span style="color:#FF0000">There will be certain exceptions but given that this could have been avoided, you will be fined</span>
 >
-> ### $\textcolor{red}{\textsf{CSS-007: Nu. 50}}$
+> ### CSS-007: Nu. 50
 >
 
 &nbsp;
 #### 9. Use `Single Quote` for all urls and contents (Refer Onboarding steps)
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```scss
+✅ Best Practice:						❌ Bad Practice:
+
 .container { 							.container {
   background-image: url('images/logo.png');  			 background-image: url("images/logo.png");
  } 								}								 
 ```
 >
-> ### $\textcolor{red}{\textsf{CSS-008: Nu. 100}}$
+> ### CSS-008: Nu. 100
 >
 
 &nbsp;
@@ -259,8 +272,9 @@ Refer: https://www.sitepoint.com/css-viewport-units-quick-start/
 
 $\color{#58A6FF}\textsf{\large\&#x24D8;\kern{0.15cm}\normalsize &nbsp;Note: You might need to cosider using dvh | dvw for resposiveness}$
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```scss
+✅ Best Practice:						❌ Bad Practice:
+
 .plot { 							.plot {
    width: calc(100vw - 100px);  			 	 width: 1000px;
    height: 100dvh;						 height: 900px;
@@ -287,8 +301,9 @@ add eg
 &nbsp;
 #### 12. Border radius should be uniform components with edges like buttons and cards according to style guidelines.
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```scss
+✅ Best Practice:						❌ Bad Practice:
+
 button, .card { 						button {
    width: calc(100vw - 100px);  			 	 border-radius: 10px;
    height: 100dvh;						 height: 900px;
@@ -306,9 +321,11 @@ button, .card { 						button {
 Refer: https://medium.com/ux-art/html-hierarchy-tree-7a2947f2bf01
 
 - Let’s avoid declaring `<p>` inside any `<button>` and using block element inside inline element etc
-- 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
-```html																				
+
+
+```html		
+✅ Best Practice:								❌ Bad Practice:
+	
 1. <button mat-button color="primary>						1. <button mat-button color= "primary">
 	  Login						  			    <p>Login</p>
    </button>  									   </button>   
@@ -321,7 +338,7 @@ Refer: https://medium.com/ux-art/html-hierarchy-tree-7a2947f2bf01
 
 > <span style="color:#FF0000">By any means we have to follow HTML hierarchy</span>
 >
-> ### $\textcolor{red}{\textsf{HTML-001: Nu. 20}}$
+> ### HTML-001: Nu. 20
 >
 
 &nbsp;
@@ -330,15 +347,16 @@ Refer: https://medium.com/ux-art/html-hierarchy-tree-7a2947f2bf01
 - Use underscore (_) for naming images.
 - Please add proper descriptive text with proper sentence formatting.
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
-```html										
+```html				
+✅ Best Practice:							❌ Bad Practice:
+						
 <img src=”../../../assets/images/profile_image.jpg” 			<img src=”../../../assets/images/profile-image.jpg” alt="boy">
 alt=”Profile Image” class="width-full" />				<img src=”../../../assets/images/profile.jpg” alt="Profile.jpg">
 																			
 ```
 > <span style="color:#FF0000">All images should have alt attribute with proper text which is not repetitive</span>
 >
-> ### $\textcolor{red}{\textsf{HTML-002: Nu. 10}}$
+> ### HTML-002: Nu. 10
 >
 
 
@@ -351,11 +369,11 @@ alt=”Profile Image” class="width-full" />				<img src=”../../../assets/ima
 		
 > <span style="color:#FF0000">If image is not compressed and still in KB</span>
 >
-> ### $\textcolor{red}{\textsf{HTML-003: Nu. 20}}$
+> ### HTML-003: Nu. 20
 >
 > <span style="color:#FF0000">If Image is in MB</span>
 >
-> ### $\textcolor{red}{\textsf{HTML-004: Nu. 50}}$
+> ### HTML-004: Nu. 50
 >
 
 &nbsp;
@@ -364,22 +382,23 @@ alt=”Profile Image” class="width-full" />				<img src=”../../../assets/ima
 
 > <span style="color:#FF0000">There will be certain exceptions but given that this could have been avoided, you will be fined</span>
 >
-> ### $\textcolor{red}{\textsf{HTML-005: Nu. 20}}$
+> ### HTML-005: Nu. 20
 >
 
 
 &nbsp;
 #### 5. Loop Over the classes or elements that have the same properties.
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
+
 ```html
+✅ Best Practice:								❌ Bad Practice:
 													            
-	<mat-card *ngFor="let item of items">{{item}} </mat-card> 		<mat-card> </mat-card>
+    <mat-card *ngFor="let item of items">{{item}} </mat-card> 			<mat-card> </mat-card>
 							  			<mat-card> </mat-card>
 										<mat-card> </mat-card>
 										<mat-card> </mat-card>
 ```
 >
-> ### $\textcolor{red}{\textsf{HTML-006: Nu. 20}}$
+> ### HTML-006: Nu. 20
 >
 
 
@@ -387,17 +406,17 @@ alt=”Profile Image” class="width-full" />				<img src=”../../../assets/ima
 #### 6. Use of HTML entity
 - Use html entity for cases like copyright instead of special characters.
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
-
 ```html
+✅ Best Practice:						❌ Bad Practice:
 
  `&copy` copyright, All rights reserved.			***Do not copy paste and use***	
 								© copyright, All rights reserved.
 ```
  
 - Bind currentYear in FE and BE both
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
+
 ```
+✅ Best Practice:								❌ Bad Practice:
   ***Angular***
    ts: year = new Date().getFullYear();						Company Name 2020, All rights reserved
    HTML: Company Name {{year}}, All rights reserved. 
@@ -405,19 +424,21 @@ alt=”Profile Image” class="width-full" />				<img src=”../../../assets/ima
    Company Name <%= DateTime.now.year %>, All rights reserved.
 ```
 >
-> ### $\textcolor{red}{\textsf{HTML-007: Nu. 20}}$
+> ### HTML-007: Nu. 20
 >
 
 &nbsp;
 #### 7.Carelessness
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
-```html                            			 
+
+```html     
+✅ Best Practice:       						❌ Bad Practice:
+                			 
 <p> Hello </p>								 <P> Hello </P>
 <div> Lorem Ipsum </div>						 <DIV> Lorem Ipsum </div>
 ```
 
 >
-> ### $\textcolor{red}{\textsf{HTML-008: Nu.50}}$
+> ### HTML-008: Nu.50
 >
 
 &nbsp;
@@ -427,9 +448,10 @@ alt=”Profile Image” class="width-full" />				<img src=”../../../assets/ima
 
 &nbsp;
 #### 9. Proper Indentation of code. Use predefined HTML selectors for better segregation and understandability with proper indentation
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 
 ```html
+✅ Best Practice:						❌ Bad Practice:
+
 <body>								<body>
   <div class="app-header"> 					 <header class="header">
     <h1 class="app-title">Welcome to My Web Page</h1>		 <span class="app-title">Welcome to My Web Page</span>
@@ -470,7 +492,8 @@ alt=”Profile Image” class="width-full" />				<img src=”../../../assets/ima
 #### 10. We need to start using html5 tags since these help us in understandability. It also helps in SEO.
 
 ```html
-Best Practice
+✅ Best Practice:
+
 <html>
 <body>
  <header></header>
@@ -487,8 +510,8 @@ Best Practice
 &nbsp;
 #### 11.If there are more than one images, let's group them inside the `<figure>` tag.
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```html
+✅ Best Practice:									❌ Bad Practice:
 					
 <figure>									 		
  <img src=”../assets/images/test_one.jpg” alt=”Profile Image” ...>			  <img src=”../assets/images/test1jpg” alt=”Profile Image”>
@@ -503,7 +526,7 @@ Storing dummy images locally are not allowed, instead use default images. If usi
 
 > <span style="color:#FF0000">If found storing dummy images</span>
 >
-> ### $\textcolor{red}{\textsf{HTML-009: Nu. 30}}$
+> ### HTML-009: Nu. 30
 >
 
 &nbsp;
@@ -513,8 +536,9 @@ Storing dummy images locally are not allowed, instead use default images. If usi
 
 $\color{#58A6FF}\textsf{\large\&#x24D8;\kern{0.2cm}\normalsize Note:}$ Start using @use and @extend
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```
+✅ Best Practice:					❌ Bad Practice:
+
  _fonts.scss						1.Including all the styles in style.scss.
  _utility.scss 						2.File named as font-size.scss or media-query-mixin.scss
  _font-size.scss
@@ -525,7 +549,7 @@ $\color{#58A6FF}\textsf{\large\&#x24D8;\kern{0.2cm}\normalsize Note:}$ Start usi
 
 > <span style="color:#FF0000">Basic SCSS</span>
 >
-> ### $\textcolor{red}{\textsf{SCSS-001: Nu. 30}}$
+> ### SCSS-001: Nu. 30
 >
 
 
@@ -536,8 +560,10 @@ $\color{#58A6FF}\textsf{\large\&#x24D8;\kern{0.2cm}\normalsize Note:}$ Start usi
 - Always use 3 DIGIT decimal value for alpha in rgba value.
 - Don't give shitty name for the variable.  
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
+
 ```scss
+✅ Best Practice:					❌ Bad Practice:
+
  *Variable*						*Including all the styles in style.scss*
  $black: #000000;					p {
  p {							  color:  #000;
@@ -558,12 +584,12 @@ pinkish-red: '#FBF0F3',					'amour-pink': '#FBF0F3',(Can you imagine how it will
 ```
 
 > <span style="color:#FF0000">DO NOT use the hex value or color name directly in your scss..</span>
-> ### $\textcolor{red}{\textsf{CSS-002: Nu. 30}}$
+> ### CSS-002: Nu. 30
 >
 > 
 > <span style="color:#FF0000">Do not name a color as you wish; variables should have a meaningful or understandable name..</span>
 >
-> ### $\textcolor{red}{\textsf{CSS-002.1: Nu. 10}}$
+> ### CSS-002.1: Nu. 10
 >
 
 &nbsp;
@@ -571,8 +597,9 @@ pinkish-red: '#FBF0F3',					'amour-pink': '#FBF0F3',(Can you imagine how it will
 
 * No more having multiple shades of gray each time a new color is given in our specs.We only use the existing colors we have defined (We can discuss and add up the colors which we have used most commonly all over our projects).
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```scss
+✅ Best Practice:						❌ Bad Practice:
+
  *Variable*
  `$black: #000000;`						$black-87: rgba(0,0,0,0, 0.87);
 								$black-90: rgba(0,0,0,0, 0.90);
@@ -583,15 +610,16 @@ pinkish-red: '#FBF0F3',					'amour-pink': '#FBF0F3',(Can you imagine how it will
 
 > <span style="color:#FF0000">Unnecessary shades of any colors will be fined.(exceptional: primeNG theming)</span>
 >
-> ### $\textcolor{red}{\textsf{SCSS-003: Nu. 20}}$
+> ### SCSS-003: Nu. 20
 >
 
 
 &nbsp;
 #### 4. Media queries should be within the same class instead of separate general device queries.
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```scss
+✅ Best Practice:					❌ Bad Practice:
+
  .header {						.header {
    width: 1000px;					  width: 1000px;
     @media (max-width: 350px) {				}
@@ -608,16 +636,15 @@ pinkish-red: '#FBF0F3',					'amour-pink': '#FBF0F3',(Can you imagine how it will
 
 > <span style="color:#FF0000">For better readability it's always better to include all the media queries wrapped within the particular element or class.</span>
 >
-> ### $\textcolor{red}{\textsf{SCSS-004: Nu. 40}}$
+> ### SCSS-004: Nu. 40
 >
 
 
 &nbsp;
 #### 5. If same styling is to be applied in multiple classes then use `sass @extend`
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
-
 ```scss
+✅ Best Practice:					❌ Bad Practice:
 Example 1 (@extend with placeholder selector)
 
  %button-basic  {					.button-report  {
@@ -658,15 +685,15 @@ Example 2 (@extend with class selector)
 
 > <span style="color:#FF0000">Repetition will be fined</span>
 >
-> ### $\textcolor{red}{\textsf{SCSS-005: Nu. 20}}$
+> ### SCSS-005: Nu. 20
 >
 
 &nbsp;
 #### 6. Basic CSS/SCSS typos or combinations missed
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 
 ```scss
+✅ Best Practice:				❌ Bad Practice:
 
  .container, .profile { 			.container {
     width: 100%;				 width: 100%;
@@ -676,7 +703,7 @@ Example 2 (@extend with class selector)
 						 }
 ```
 >
-> ### $\textcolor{red}{\textsf{SCSS-006: Nu. 50}}$
+> ### SCSS-006: Nu. 50
 >
 
 
@@ -684,23 +711,25 @@ Example 2 (@extend with class selector)
 &nbsp;
 #### 7. Copied Codes not removed
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
-```html                                         				
-<table mat-table>   				    		<table mat-table>										 <th mat-header-cell> Weight </th>				  <th mat-header-cell> Weight </th> 								 <td mat-cell> {{element.weight}} </td>				   <!--Name Column--> 										</table>							   <!--Note that these columns can be defined in any order. -->	 		 
-								  <td mat-cell> {{element.weight}} </td>	     														   <td mat-cell> {{element.weight}} </td>	
+```html      
+✅ Best Practice:						❌ Bad Practice:
+                     				
+<table mat-table>   				    		<table mat-table>													 <th mat-header-cell> Weight </th>			 <th mat-header-cell> Weight </th> 											 <td mat-cell> {{element.weight}} </td>			   <!--Name Column--> 											</table>							   <!--Note that these columns can be defined in any order. -->	 		 
+								  <td mat-cell> {{element.weight}} </td>	     														  		 <td mat-cell> {{element.weight}} </td>	
 								<table>  
 ```
 
 >
-> ### $\textcolor{red}{\textsf{SCSS-007: Nu.30}}$
+> ### SCSS-007: Nu.30
 >
 
 &nbsp;
 #### 8. Provide the stylesheet info by commenting
 - recommended for mixins
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
 ```scss
+✅ Best Practice:
+
 _variables.scss
 /*
 Variables.scss: contains variables referable by other stylesheet to avoid redundancy 
@@ -710,8 +739,9 @@ Variables.scss: contains variables referable by other stylesheet to avoid redund
 &nbsp;
 #### 9.Always write (&:hover, &:focus) intact and give pointer cursor to all action links and buttons
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
 ```css
+✅ Best Practice:
+
 a {
    text-decoration: none;
    &:hover, &:focus {
@@ -723,8 +753,9 @@ a {
 &nbsp;
 #### 10. Let us avoid using long path names while importing
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```scss
+✅ Best Practice:								❌ Bad Practice:
+
  @import ‘variables’; 								@import ‘../../assets/stylesheets/variables’
  @use ‘variables’ as *; 
  
@@ -753,7 +784,7 @@ example of config:
 * Name of the folder and sub folder name  should be always separated by  “-”. 
 * Avoid using “_” and avoid direct naming the folder and sub folder with “PascalCase”.
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+<div align="center">✅ Best Practice:</div>
 
 <div align="center">	
   <img src="asset/1.png" width="500px" alt="1.png">
@@ -784,7 +815,7 @@ example of config:
 ### 5. Wrapping of the 3rd party libraries in the main component/ top level component.
 * To avoid the wrapping of the 3rd party libraries repeated. Please wrap it on the top level components like main.tsx or app.tsx.
   
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+<div align="center">✅ Best Practice:</div>
 
 <div align="center">	
   <img src="asset/5.png" width="600px" alt="5.png">
@@ -826,7 +857,8 @@ example of config:
 &nbsp;
 ### 13. For looping data, make a constant folder and loop data using map function.
 * When similar data is repeating, please make a constant folder and loop the data using function such as map.
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+
+<div align="center">✅ Best Practice:</div>
 
 <div align="center">	
   <img src="asset/13.1.png" width="500px" alt="13.1.png">
@@ -834,7 +866,8 @@ example of config:
 
 &nbsp;
 ### 14. For theming, all the variables should be defined in ts. Then we will create a global variable in the assets folder.
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+
+<div align="center">✅ Best Practice:</div>
 <div align="center">	
   <img src="asset/14.1.png" width="500px" alt="13.1.png">
   <img src="asset/14.2.png" width="500px" alt="13.1.png">
@@ -842,7 +875,8 @@ example of config:
   
 &nbsp;
 ### 15. Import of the required library should be particular to a file.
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+
+<div align="center">✅ Best Practice:</div>
 – Use Code reformat
 			OR
 – github lint
@@ -852,8 +886,9 @@ example of config:
 ### 16. For any logical condition use hook, and interface to pass variable from on component to child component.
 * Whenever there is a logical condition, use react hook such as useState, and to pass variables from parent to a child component, use props.
 
-    i) Using use state to show and hide the elements. 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+    i) Using use state to show and hide the elements.
+  
+<div align="center">✅ Best Practice:</div>
 
 <div align="center">	
   <img src="asset/16.1.1.png" width="500px" alt="16.1.1.png">
@@ -862,7 +897,8 @@ example of config:
 </div>
 
    ii) Using props and interface to pass data from parent to child.
- ### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+   
+<div align="center">✅ Best Practice:</div>
  <div align="center">	
   <img src="asset/16.2.1.png" width="500px" alt="16.2.1.png">
  <br>
@@ -875,11 +911,12 @@ example of config:
 ### 17. Don’t use {} in className and props unless there are some logical conditions to be written. Value string, don’t use {} (refactor)
 Avoid using {} in className unless there are some logical conditions to be written as it makes the code noisy.
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+✅ Best Practice:
+
  insert img
 
   
-### $${\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
+<div align="center">✅ Best Practice:</div>
  <div align="center">	
   <img src="asset/17-bad.png" width="500px" alt="17-bad.png">
 </div>
@@ -888,7 +925,8 @@ Avoid using {} in className unless there are some logical conditions to be writt
 ### 18. React Material 
 1. Avoid usage of p, span and div tag. We will use typography, and box layout.
 React Material has their own component, that can be modified and used easily in the material configuration (theming)
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+
+<div align="center">✅ Best Practice:</div>
 <div align="center">	
   <img src="asset/18.1.png" width="500px" alt="18.1.png">
 </div>
@@ -902,7 +940,8 @@ Material provide their own mixin and hence, we don’t have to create our own mi
 1. Styled Components should be reusable by passing props.
   
 Styled Components should be coded in such a way that we can pass probs. This way the styled component can be reused and line of code reduces.
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+
+<div align="center">✅ Best Practice:</div>
 <div align="center">	
   <img src="asset/19.1.png" width="500px" alt="19.1.png">
 </div>
@@ -910,13 +949,15 @@ Styled Components should be coded in such a way that we can pass probs. This way
 2. Component naming should be in Pascal Case. (Prefix should start using Styled)
   
 Styled component naming convention should be in Pascal case and should start with ‘Styled’ followed by the component name. This way we can differentiate between normal components and styled component.
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+
+<div align="center">✅ Best Practice:</div>
 <div align="center">	
   <img src="asset/19.2.png" width="500px" alt="19.2.png">
 </div>
 
 3. Common style should in shared.styles.tsx
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+   
+<div align="center">✅ Best Practice:</div>
 <div align="center">	
   <img src="asset/19.3.png" width="500px" alt="19.3.png">
 </div>
@@ -924,7 +965,8 @@ Styled component naming convention should be in Pascal case and should start wit
 4. UI kits needs to be wrapped by Styled Component (Optional)
   
 Kits such as buttons need to be wrapped inside a styled component so that we can pass props to it or easily apply style inside the kits itself.
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+
+<div align="center">✅ Best Practice:</div>:
 <div align="center">	
   <img src="asset/19.4.png" width="500px" alt="19.4.png">
 </div>
@@ -935,9 +977,9 @@ Kits such as buttons need to be wrapped inside a styled component so that we can
 ### 1. Make css files
 Make a separate file for variable if there are many color variables only, otherwise it can be imported in config file.
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
-
 ```
+✅ Best Practice:
+
  |-application.scss (just imports of files)
 	|-component (Classes of only the components of a particular project)
 	|-base.scss (tailwind base that you want to change)
@@ -951,7 +993,7 @@ Make a separate file for variable if there are many color variables only, otherw
 
 > <span style="color:#FF0000">If in case separate files are not maintained</span>
 > 
-> ### $\textcolor{red}{\textsf{tw-001: Nu.10}}$
+> ### tw-001: Nu.10
 >
 
 
@@ -963,8 +1005,10 @@ Ex: @apply, @layer, @variants, etc
 Make best use of @apply to make common components such as btn, btn--primary, cards, etc.
 More than 6 tailwind class and use case more than two then this to be included in tailwind css component with @apply
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
+
 ```scss
+✅ Best Practice:
+
  @layer components { 
     .sk-btn {
       @apply h-[40px] rounded-[4px] border cursor-pointer;
@@ -979,7 +1023,7 @@ More than 6 tailwind class and use case more than two then this to be included i
 
 > <span style="color:#FF0000">If in case separate files are not maintained</span>
 > 
-> ### $\textcolor{red}{\textsf{tw-002: Nu.15}}$
+> ### tw-002: Nu.15
 >
 
 
@@ -991,7 +1035,7 @@ Instead of using tailwind colors along with project specific colors, let us only
 
 > <span style="color:#FF0000">If in case extending colors</span>
 > 
-> ### $\textcolor{red}{\textsf{tw-003: Nu.20}}$
+> ### tw-003: Nu.20
 >
 
 ### 6. Root variable - naming convention
@@ -1003,8 +1047,9 @@ black: #000000
   
 Not allowed to use bg-[rgba(0,0,0,0.5)], instead derive lighter version of colors from one base color. Exception for some common class.
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}}$$
 ```scss
+✅ Best Practice:
+
  	colors: {
          withOpacityValue('--primary'),
          withOpacityValue('--success'),
@@ -1016,7 +1061,7 @@ Not allowed to use bg-[rgba(0,0,0,0.5)], instead derive lighter version of color
   
 > <span style="color:#FF0000">if found using bg-[rgba(0,0,0,0.5)] to generate lighter color</span>
 > 
-> ### $\textcolor{red}{\textsf{tw-005: Nu.15}}$
+> ### tw-005: Nu.15
 >
 
 
@@ -1025,7 +1070,7 @@ Px and Rem units are not to be mixed. All the clases with rem in tailwind should
 
 > <span style="color:#FF0000">If in case found mixing above mentioned clasess</span>
 > 
-> ### $\textcolor{red}{\textsf{tw-004: Nu.20}}$
+> ### tw-004: Nu.20
 >
 
 
@@ -1034,20 +1079,22 @@ Gap classes to be used only with grid as there is issue with browser compatibili
 
 > <span style="color:#FF0000">If in case found using it with flex or others</span>
 > 
-> ### $\textcolor{red}{\textsf{tw-006: Nu.200}}$
+> ### tw-006: Nu.200
 >
 
 # Pull Request
 #### 1.  Always give a `Proper Branch Name`. Remember to include `UI` at the end of the branch name to differentiate it from `FE branch`.
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
+
 ```
+✅ Best Practice:				❌ Bad Practice:
+
  feature/event-creation-ui			feature/event-creation-ui-karma
  feature/profile-ui				event_creation
  feature/auth-ui				ft/event-creation
 
 ```
 >
-> ### $\textcolor{red}{\textsf{PR-001: Nu. 20}}$
+> ### PR-001: Nu. 20
 >
 
 
@@ -1055,8 +1102,10 @@ Gap classes to be used only with grid as there is issue with browser compatibili
 #### 2. Make `PR comments` easily comprehensive using these tags along with comments
 -for #Mandatory and #Fine the comments have to be resolved immediately
 -Reviewers have to make sure not to approve PR unless these two comment tags (#Mandatory and #Fine) are resolved.
-### $${\textcolor{green}{\textsf{-------List of Tags----------------------------}}}$$
+
 ```
+🔵 List of Tags:
+
  #Doubt
  #Suggestion
  #Refactor
@@ -1068,8 +1117,9 @@ Gap classes to be used only with grid as there is issue with browser compatibili
 &nbsp;
 #### 2. While commiting, the message should be meaningful and understandable. "Commit a command, not a story or gibberish words"
 
-### $${\textcolor{green}{\textsf{----------------------------Best Practice----------------------------}}} {\textcolor{red}{\textsf{----------------------------Bad Practice----------------------------}}}$$
 ```
+✅ Best Practice:								❌ Bad Practice:
+
 - Never use special characters  for messages.
 
  	git commit -m "layout for student profile " 				git commit -m “layout!”
@@ -1080,7 +1130,7 @@ Gap classes to be used only with grid as there is issue with browser compatibili
 ```
 
 >
-> ### $\textcolor{red}{\textsf{PR-003: Nu. 30}}$
+> ### PR-003: Nu. 30
 >
 
 
@@ -1105,7 +1155,7 @@ Gap classes to be used only with grid as there is issue with browser compatibili
 
 
 >
-> ### $\textcolor{red}{\textsf{PR-004: Nu. 20}}$
+> ### PR-004: Nu. 20
 >
 
 &nbsp;
@@ -1114,7 +1164,7 @@ Gap classes to be used only with grid as there is issue with browser compatibili
 - Put screenshots for any kind of design changes- major or minor.
 
 >
-> ### $\textcolor{red}{\textsf{PR-005: Nu. 20}}$
+> ### PR-005: Nu. 20
 >
 
 
@@ -1122,21 +1172,21 @@ Gap classes to be used only with grid as there is issue with browser compatibili
 #### 5.  Always `Include all the UI Team Members`, `FE,UX and PA member(project based)` for your PR review.
 
 >
-> ### $\textcolor{red}{\textsf{PR-006: Nu. 10}}$
+> ### PR-006: Nu. 10
 >
 
 &nbsp;
 #### 6. Always `review PR` that you are tagged in, `before the deadline`.
 
 >
-> ### $\textcolor{red}{\textsf{PR-007: Nu. 30}}$
+> ### PR-007: Nu. 30
 >
 
 &nbsp;
 #### 7. Repeating the same mistake or ignoring previous PR comments
 
 >
-> ### $\textcolor{red}{\textsf{PR-008: Nu. 30}}$
+> ### PR-008: Nu. 30
 >
 
 &nbsp;
@@ -1144,20 +1194,20 @@ Gap classes to be used only with grid as there is issue with browser compatibili
 - Organize PR's in small chunks.
 
 >
-> ### $\textcolor{red}{\textsf{PR-009: Nu. 20}}$
+> ### PR-009: Nu. 20
 >
 
 # Formatting
 #### 1. Formatting does not follow the `convention standard (HTML, SCSS, TS, JSON)`.
 
 >
-> ### $\textcolor{red}{\textsf{FORMATE-001: Nu. 20}}$
+> ### FORMATE-001: Nu. 20
 >
 
 &nbsp;
 #### 2. Maximum Lines of code for any SCSS is 500.
 >
-> ### $\textcolor{red}{\textsf{FORMATE-002: Nu. 20}}$
+> ### FORMATE-002: Nu. 20
 >
 
 
@@ -1172,7 +1222,7 @@ Formats for revisit tag should be strictly in the following format:
 	 Eg: TODO BE/FE : comment
 
 >
-> ### $\textcolor{red}{\textsf{FORMATE-003: Nu. 20}}$
+> ### FORMATE-003: Nu. 20
 >
 
  &nbsp;
@@ -1234,8 +1284,9 @@ project with Tailwind:
 #### 1. One should not miss any translation.
 - Always add a comment whether the translation or Data is coming from BE/FE.
 
-### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
+✅ Best Practice:							   ❌ Bad Practice:
+
 <span fxFlex="95" class="gray-color">                                       <span fxFlex="95" class="gray-color">
        {{'CANT_RESCHEDULE' | translate }}                                        {{'Can't Reschedule'}}
 </span>                                                                     </span>																						                                                            
@@ -1243,7 +1294,7 @@ project with Tailwind:
 <span> Name </span>							     <span> Name </span>
 ```
 >
-> ### $\textcolor{red}{\textsf{TRANS-0013: Nu. 20}}$
+> ### TRANS-0013: Nu. 20
 >
 
 &nbsp;
@@ -1270,32 +1321,35 @@ project with Tailwind:
   <img src="asset/tra1.jpg" width="600px" alt="18.1.png">
 </div>
 
-### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
  ```
+ ✅ Best Practice:						❌ Bad Practice:
+
  LABEL_NAME 							cant_reschedule
  BTN_ADD    							cant_reschedule_your_appointment_for_meeting
  QUEST_YOUR_NAME  						QUEST_WHAT_IS_YOUR_NAME
 ```
 >
-> ### $\textcolor{red}{\textsf{TRANS-002: Nu. 20}}$
+> ### TRANS-002: Nu. 20
 >
 
 &nbsp;
 #### 3. For a line of long translation that expands beyond one's linting limit, include a backtick and break the line in multiple lines.
 
-### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}}$$
 ```
+✅ Best Practice:
+
   "HINT_DROP_SIGNATURE": "Drop your signature here or
    <span class=\"text-primary\"><u class=\"font-bold\">Choose File</u></span>",
 ```
 
-### $${\textcolor{red}{\textsf{----------------------Bad Practice----------------------}}}$$
 ```
+✅ Best Practice:
+
   "HINT_DROP_SIGNATURE": "'Drop your signature here or' +
    <span class=\"text-primary\"><u class=\"font-bold\">Choose File</u></span>",
 ```
 >
-> ### $\textcolor{red}{\textsf{TRANS-003: Nu. 30}}$
+> ### TRANS-003: Nu. 30
 >
 
 &nbsp;
@@ -1303,8 +1357,9 @@ project with Tailwind:
 - Don't use params when it is at the beginning or end of the sentence.
 - param name should be proper.
 
-### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```
+✅ Best Practice:							❌ Bad Practice:
+
 **en.ts**
 'SCHEDULED_RETAILER': 'Scheduled Interaction with Retailer' 		'SCHEDULED_RETAILER': 'Scheduled Interaction with Retailer {{value}}'
 
@@ -1315,8 +1370,9 @@ project with Tailwind:
 &nbsp;
 #### 5. Segregate backend translations in a `folder` or as a separate `file`
 
-### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}}$$
 ```
+			     ✅ Best Practice:
+
 				**Folder**
 				 Backend
 				  en.json
@@ -1329,17 +1385,20 @@ project with Tailwind:
 &nbsp;
 #### 6. Do not use abbreviation in translation keys
 - The only abbrev allowed is ID or product short keys like NNI.
-### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 
 ```
+✅ Best Practice:						❌ Bad Practice:
+
 "LABEL_BASIC_INFORMATION": 					"Basic Information","LABEL_BASIC_INFO": "Basic Information",
 "LABEL_PHONE_NUMBER": "Phone No."				"LABEL_PHONE_NO": "Phone No."
 ```
 
 &nbsp;
 #### 7. Avoid adding translations for static text.
-- ### $${\textcolor{red}{\textsf{----------------------Bead Practice----------------------}}}
+
 ```
+					     ❌ Bad Practice:
+
 						**Examples**:
 						LABEL_ID
 						LABEL_SL
@@ -1351,7 +1410,7 @@ project with Tailwind:
 
 #### 1. Every two weeks (usually on wednesday) a peer programming team (of two) has to do a presentation on a topic they can select. Teams should be aware of their turn and present on that day accordingly.
 >
-> ### $\textcolor{red}{\textsf{PPT-01: Nu. 20}}$
+> ### PPT-01: Nu. 20
 >
 
 &nbsp;
@@ -1385,9 +1444,9 @@ A **BEM** class name includes three parts.
 &nbsp;
 ### 1.Wrongly nested blocks and elements
 - It is not allowed to nest blocks. If you start a new block, you are not allowed to proceed with elements from another block.
-### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
-Bad Practice Best Practice
+✅ Best Practice:						❌ Bad Practice:
+
 <div class="card">						<div class="card">
  <div class="card__header"> 					 <div class="header">
     <h2 class="card__headline></h2>				  <h2 class="card__headline></h2>
@@ -1395,14 +1454,15 @@ Bad Practice Best Practice
 </div>								</div>
 ```
 >
-> ### $\textcolor{red}{\textsf{BEM-01: Nu. 20}}$
+> ### BEM-01: Nu. 20
 >
 
 &nbsp;
 ### 2. Great-grandchildren
 - There are no grandchildren nor great-grandchildren in BEM. Instead, »normal« elements of the block can be used.
-### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
+✅ Best Practice:						❌ Bad Practice:
+
 <div class="card">						<div class="card">
   <div class="card__header">					 <div class="card__header">
     </h2><h2 class="card__headline></h2>			  <h2 class="card__header__headline>
@@ -1410,14 +1470,15 @@ Bad Practice Best Practice
 </div>								</div>
 ```
 >
-> ### $\textcolor{red}{\textsf{BEM-02: Nu. 15}}$
+> ### BEM-02: Nu. 15
 >
 
 &nbsp;
 ### 3. Modifiers without a base class
 - Modifiers cannot exist without a base block or element.
-### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
+✅ Best Practice:						❌ Bad Practice:
+
 <div class="card card--highlight">				<div class="card--highlight">
   <div class="card__header"></div>			 	 <div class="card__header"></div> 
 </div>								</div>
@@ -1427,14 +1488,15 @@ Bad Practice Best Practice
 </div>								</div>
 ```
 >
-> ### $\textcolor{red}{\textsf{BEM-03: Nu. 10}}$
+> ### BEM-03: Nu. 10
 >
 
 &nbsp;
 ### 4. Too big blocks
 - It is not a good idea to create really big blocks. The idea of BEM is to create modular and reusable blocks.
-### $${\textcolor{green}{\textsf{----------------------Best Practice----------------------}}} {\textcolor{red}{\textsf{-----------------------Bad Practice-------------------}}}$$
 ```html
+✅ Best Practice:					❌ Bad Practice:
+
 <body class="body">					<body class="body">
     <header class="header">				 </header><header class="body__header"></header>
      <main class="main"></main>				  <main class="body__main"></main>
